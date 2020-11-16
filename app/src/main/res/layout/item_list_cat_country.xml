@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="country"
+            type="com.pauln.catpedia.domain.model.Country" />
+
+        <variable
+            name="catListVM"
+            type="com.pauln.catpedia.ui.catlist.CatListViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/shape_rounded_borders_white"
+        android:elevation="1dp"
+        android:onClick="@{()->catListVM.filterCatsByCountry(country)}"
+        android:padding="4dp">
+
+        <TextView
+            android:id="@+id/appTv"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="@{country.code}"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="ES" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

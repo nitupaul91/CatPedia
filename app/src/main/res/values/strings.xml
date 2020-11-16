@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">CatPedia</string>
+
+    <!--    Error-->
+    <string name="general_error">Something went wrong. Please try again.</string>
+
+    <!--    Login-->
+    <string name="login_btn_text">Login</string>
+    <string name="login_hint_username">Username</string>
+    <string name="login_hint_password">Password</string>
+
+    <!--    CatList-->
+    <string name="cats_placeholder_text">No cats available yet :(</string>
+
+    <string name="location">Location:</string>
+    <string name="temperament">Temperament:</string>
+
+</resources>

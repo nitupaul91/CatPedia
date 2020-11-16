@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.pauln.catpedia.ui.login.LoginFragment"
+        android:label="Login Fragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_catListFragment"
+            app:destination="@id/catListFragment"
+            app:popUpTo="@+id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/catListFragment"
+        android:name="com.pauln.catpedia.ui.catlist.CatListFragment"
+        android:label="Cat List Fragment"
+        tools:layout="@layout/fragment_cat_list" />
+
+    <fragment
+        android:id="@+id/catDetailsFragment"
+        android:name="com.pauln.catpedia.ui.catdetails.CatDetailsFragment"
+        android:label="Cat Details Fragment"
+        tools:layout="@layout/fragment_cat_details" />
+
+</navigation>
